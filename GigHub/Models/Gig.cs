@@ -16,7 +16,7 @@ namespace GigHub.Models
         [Required]
         [StringLength(255)]
         public string Venue { get; set; }
-        
+
         [Required]
         public byte GenreId { get; set; }
         public Genre Genre { get; set; }
