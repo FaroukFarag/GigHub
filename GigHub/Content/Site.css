@@ -28,6 +28,26 @@ span.field-validation-error {
     font-weight: bold;
 }
 
+.verysmall-voffset {
+    margin-top: 2px;
+}
+
+.small-voffset {
+    margin-top: 5px;
+}
+
+.medium-voffset {
+    margin-top: 10px;
+}
+
+.high-voffset {
+    margin-top: 20px;
+}
+
+.veryhigh-voffset {
+    margin-top: 40px;
+}
+
 /* Bootstrap Overrides */
 body {
     font-size: 17px;
