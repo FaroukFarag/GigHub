@@ -4,7 +4,7 @@ using Microsoft.AspNet.Identity;
 using System.Linq;
 using System.Web.Http;
 
-namespace GigHub.Controllers
+namespace GigHub.Controllers.Api
 {
     [Authorize]
     public class AttendancesController : ApiController
@@ -22,7 +22,7 @@ namespace GigHub.Controllers
             var attendeeId = User.Identity.GetUserId();
             var exists = _context.Attendances.Any(a => a.AttendeeId == attendeeId && a.GigId == dto.GigId);
 
-            if(exists)
+            if (exists)
             {
                 return BadRequest("The Attendance already exist.");
             }

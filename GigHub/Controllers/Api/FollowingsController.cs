@@ -4,7 +4,7 @@ using Microsoft.AspNet.Identity;
 using System.Linq;
 using System.Web.Http;
 
-namespace GigHub.Controllers
+namespace GigHub.Controllers.Api
 {
     [Authorize]
     public class FollowingsController : ApiController
@@ -23,7 +23,7 @@ namespace GigHub.Controllers
             var exist = _context.Followings
                 .Any(f => f.FolloweeId == userId && f.FolloweeId == dto.FolloweeId);
 
-            if(exist)
+            if (exist)
             {
                 return BadRequest("The Following already exist.");
             }
